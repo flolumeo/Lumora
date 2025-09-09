@@ -177,3 +177,80 @@
 <script src="script.js"></script>
 </body>
 </html>
+/* Estilo futurista para Lumeo */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Orbitron', sans-serif; }
+body { background:#0a0a0a; color:#fff; scroll-behavior:smooth; }
+
+header {
+  background: linear-gradient(90deg,#4c00ff,#00f0ff);
+  padding:1rem; text-align:center; font-size:2rem; letter-spacing:2px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3); position:sticky; top:0; z-index:1000;
+}
+
+nav {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem;
+  padding:0.5rem 0; background: rgba(20,20,20,0.95); position:sticky; top:60px; z-index:1000;
+}
+
+nav a {
+  color:#fff; text-decoration:none; font-weight:bold; padding:0.5rem 1rem;
+  border-radius:8px; transition:0.3s;
+}
+
+nav a:hover { background:#00f0ff22; color:#00f0ff; }
+
+section { padding:3rem 2rem; border-bottom:1px solid #222; }
+h2 { color:#4c00ff; margin-bottom:1rem; font-size:1.8rem; text-shadow:0 0 5px #00f0ff; }
+
+ul { list-style:none; padding-left:0; }
+li { margin-bottom:0.7rem; }
+
+.card {
+  background: linear-gradient(145deg,#111,#1a1a1a);
+  border:1px solid #222; border-radius:12px; padding:1rem; margin:1rem 0;
+  box-shadow:0 4px 20px rgba(0,0,0,0.7);
+  transition:0.3s, transform 0.3s;
+  position:relative; overflow:hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 25px #00f0ff, 0 0 40px #4c00ff, 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.card::before {
+  content:"";
+  position:absolute; top:0; left:-75%; width:50%; height:100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  transform: skewX(-25deg);
+  transition:0.5s;
+}
+
+.card:hover::before { left:125%; transition:0.5s; }
+
+.neon { color:#00f0ff; text-shadow:0 0 5px #00f0ff,0 0 10px #4c00ff,0 0 20px #00f0ff; }
+
+.feed-item { animation:scrollFeed 25s linear infinite; }
+@keyframes scrollFeed { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+
+footer {
+  text-align:center; padding:2rem; background:linear-gradient(90deg,#4c00ff,#00f0ff);
+  margin-top:2rem; text-shadow:0 0 10px #00f0ff;
+}
+
+.btn-glow {
+  display:inline-block; padding:0.5rem 1rem; margin:0.5rem 0;
+  border:2px solid #00f0ff; border-radius:8px;
+  color:#00f0ff; text-decoration:none; text-transform:uppercase; font-weight:bold;
+  box-shadow:0 0 10px #00f0ff,0 0 20px #4c00ff; transition:0.3s;
+}
+
+.btn-glow:hover {
+  background:#00f0ff22; transform:scale(1.05);
+  box-shadow:0 0 20px #00f0ff,0 0 30px #4c00ff,0 0 40px #00f0ff;
+}
+// Script básico para futuras animaciones o interacciones
+console.log("Lumeo listo para usar 🚀");
+
+// Aquí puedes agregar efectos 3D, animaciones, botones flotantes o integraciones futuras
+
